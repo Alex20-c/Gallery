@@ -17,3 +17,31 @@ class Editor(models.Model):
         ordering = ['first_name']
         verbose_name = 'Editor'
         verbose_name_plural = 'Editors'
+class tags(models.Model):
+    name = models.CharField(max_length= 20)
+    
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = 'tag'
+        verbose_name_plural = 'tags'
+
+class Location(models.Model):
+    name = models.CharField(max_length= 20)
+    
+    def save_location(self):
+        self.save()
+    
+    def __str__(self):
+        return self.name
+
+class Category(models.Model):
+    name = models.CharField(max_length= 20)
+    
+    def save_category(self):
+        self.save()
+    
+    def __str__(self):
+        return self.name
+    
