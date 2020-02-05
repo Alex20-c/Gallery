@@ -41,8 +41,15 @@
 <div class="container">
         {% for new_item in new %}
 <div class="row">
+    
+    
 
-<div class="col-xs-6 col-md-4">
+        <!-- <div class="col-sm-6 col-md-4">
+            <br>
+            <img src="{{new_item.image.url}}" class="img-responsive" alt="Image" style="width: 600px; height: 550px;" data-toggle="modal" data-target="#basicExampleModal{{new_item.id}}">
+            <br>
+        </div> -->
+        <div class="col-xs-6 col-md-4">
             <a href="#" class="thumbnail">
             <img src="{{new_item.image.url}}" class="img-responsive" alt="Image"  data-toggle="modal" data-target="#basicExampleModal{{new_item.id}}">
             </a>
